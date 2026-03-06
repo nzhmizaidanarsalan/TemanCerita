@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #8cb4f5;
+  --color-primary-dark: #729ee6;
+  --font-display: "Nunito", sans-serif;
+}
+
+body {
+  font-family: var(--font-display);
+  background-color: #fdfbfb;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(230, 240, 255, 0.8) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(255, 235, 240, 0.8) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(255, 250, 230, 0.5) 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
